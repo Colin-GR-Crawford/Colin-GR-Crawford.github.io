@@ -1,11 +1,11 @@
 # Site
 title:              Colin Crawford
-bio:                'PLaceholder Bio'
+bio:                'Data Scientist - Engineer - Consultant'
 description:        "Placeholder text"
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/logo.png'
-background:         'assets/img/placeholder-big.jpg'
+logo:               'assets/img/profile.png'
+background:         'assets/img/background1.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 url:                https://colin-gr-crawford.github.io
@@ -39,17 +39,17 @@ disqus_shortname:   taylantatli
 #bing-verify:
 #email:
 twitter:            username
-facebook:           username
-github:             username
-#stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-#linkedin:          username
+#facebook:          username
+github:             Colin-GR-Crawford
+stackoverflow:      7064375/colin-gr-crawford  from a "http://stackoverflow.com/users/123456/username" link
+linkedin:           colin-crawford-5b3b77106
 #xing:              username
-instagram:          username
+#instagram:          username
 #lastfm:            username
 #tumblr:            username
 #pinterest:         username
 #foursquare:        username
-steam:              username
+#steam:              username
 #dribbble:          username
 #youtube:           username
 #soundcloud:        username
