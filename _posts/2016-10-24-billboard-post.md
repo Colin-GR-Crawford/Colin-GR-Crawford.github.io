@@ -11,7 +11,8 @@ comments: true
 ## In my blog post today I am going to take a quick look at some of the steps you can take to improve the chance of success in the Billboard 100 Chart (albeit for the year 2000).
 
 In case you are not familiar with the Billboard 100, here is a short excerpt from the [wikipedia](https://en.wikipedia.org/wiki/Billboard_Hot_100) article:
-> The Billboard Hot 100 is the music industry standard record chart in the United States for singles, published weekly by Billboard magazine. Chart rankings are based on radio play, online streaming, and sales (physical and digital).\n",
+
+> The Billboard Hot 100 is the music industry standard record chart in the United States for singles, published weekly by Billboard magazine. Chart rankings are based on radio play, online streaming, and sales (physical and digital).
 
 I am using a small data set that contains a list of 317 tracks that peaked in the calendar year 2000. The database includes the following details:
 * The Artist and Genre.
@@ -23,7 +24,7 @@ Scrolling through the tracks is actually pretty nostalgic, it really was a year 
 
 On closer inspection of the data it seem some of the genre tags are a bit dubious, Destiny’s Child's Independent Woman a Rock song? I am not sure many people would agree with that. However I think it would be a bit too much of an exercise to change each and everyone so I will have a go with what I have. I imagine there is a script I could write to search for each artist on Wikipedia and return the string following the genre tag, but I will save that for a rainy day.
 
-So what makes the perfect chart entry? Being incredibly good looking? The [magic 4 chords](https://www.youtube.com/watch?v=5pidokakU4I)? ...... Most Definitely! But for today I will look at some perhaps less interesting questions but much more quantifiable given the data available and timescale. The questions I have come up with and will look at are."
+So what makes the perfect chart entry? Being incredibly good looking? The [magic 4 chords](https://www.youtube.com/watch?v=5pidokakU4I)? ...... Most Definitely! But for today I will look at some perhaps less interesting questions but much more quantifiable given the data available and timescale. The questions I have come up with and will look at are.
 
 1. What Genre should I choose?
 2. How long should the track be?
@@ -52,7 +53,7 @@ Ok, so we have got the genre nailed (well slightly). The next question is track 
 
 ![Chart 3](https://colin-gr-crawford.github.io/assets/img/Billboard/TrackLengthHit.png)
 
-The track lengths form a fairly normal distribution albeit a skewed positively, this is unsurprising as track lengths can increase indefinitely especially within the progressive rock sub-genre (I am looking at you Pink Floyd) and a lot of electronic music, however I don’t think I can remember any big hits that have been less than a minute. The mean for the data is 242 seconds so we will go with that.
+The track lengths form a fairly normal distribution albeit a skewed positively, this is unsurprising as track lengths can increase indefinitely especially within the progressive rock sub-genre (I am looking at you Pink Floyd) and a lot of electronic music, however I don’t think I can remember any big hits that have been less than a minute. The mean for the data is 242 seconds and the median is 236 both within the region of the mode too, so we will go with a rough 240 seconds.
 
 #### 3. What time of year should I release the track?
 
@@ -60,23 +61,23 @@ For this question am going to work with the assumption that a probability of a t
 
 ![Chart 4](https://colin-gr-crawford.github.io/assets/img/Billboard/NTrkPerM.png)
 
-As you can see the data set is not quite complete as it only contains tracks that peaked in the chart in the year 2000, with many tracks probably peaking in 2001 and only entering in 2000, the data is therefore probably not ideal for this analysis. However, there is a clear slump in tracks being released/entering the chart between April and July, meaning that this is prime time, and this is unsurprising as the musical sales year tends to revolve around the Christmas period.
+As you can see the data set is not quite complete as it only contains tracks that peaked in the chart in the year 2000. Many tracks entered in 2000 probably ended up peaking in 2001, the data is therefore probably not ideal for this analysis. However, there is a clear slump in tracks being released/entering the chart between April and July, meaning that this is probably the best time, this result is unsurprising as musical sales tend to revolve around the Christmas period.
 
 #### 4. Will I be more successful if I have already released a track this year?
 
-So does the chart favor new comers? - So that people can say \"Oh yea I likes this band, you have probably never heard of them\". Or do people latch on to artists they have heard before? Below are two plots one showing the following; the average time taken to reach the peak in weeks and the average highest rank. Each plot shows these values as averages for the first, second third fourth and fifth track released by all respective artists for each genre.
+So does the chart favor new comers? - For those who love saying "Oh yea I like this band, you have probably never heard of them". Or does it favor the the household names that people have heard before? Below are two plots showing the following; the average time taken for a track to reach its peak in weeks and the average highest rank. Each plot shows these values as averages for the first, second third fourth and fifth track released by all applicable artists for each genre.
 
 ![Chart 5](https://colin-gr-crawford.github.io/assets/img/Billboard/AppChrt.png)
 
-What is interesting as that there is from the data provided there is a clear improvement for artists up until their third track, after which presumably the public get a bit tired of their music. So if you are going to place a bet on which track is going to be the most successful it is the third of a given year, by any artist. Obviously a year is a quite arbitrary unit but within a similar time period should be sufficient.
+What is interesting as that there is from the data provided there is a clear improvement in both ranking and rate of climb for artists releasing their second and third track, after which presumably the public get a bit tired of their music and this drops off. So if you are going to place a bet on which track is going to be the most successful it is the third of a given year, by any artist. Obviously a year is a quite arbitrary unit but within a similar time period should be sufficient.
 
 #### 5. How long do I need to be in the charts for me to have a higher chance of getting a higher rank?
 
-Ok so we have worked out the winning formula - Rock song, about 242 seconds long, released in April, and the third song you release in the year. You are on track for a winner! But when will i know if I have been a success? When am I likely to peak in my chart lifespan?
+Ok so we have worked out the winning formula - Rock song, about 240 seconds long, released in April, and the third song you release in the year. You are on track for a winner! But when will i know if I have been a success? When am I likely to peak in my chart lifespan?
 
 The charts below is split into two charts, the top shows the average rankings of all genres throughout their lifetime in the chart, the chart below it is broken down into the split by the 4 main genres.
 
-![Chart 6](https://colin-gr-crawford.github.io/assets/img/Billboard/Rank_By_Week.png)
+![Chart 6](https://colin-gr-crawford.github.io/assets/img/Billboard/Rank_by_Week.png)
 
 There is a general pattern that the longer you stay in the chart the higher you will climb it, no surprise there really. The graph shows us that on average you will peak between week 35-45. What is very surprising the large drop off between week 20 and week 21, essentially telling us that if you can keep climbing to week 20, you work is about to pay off! This average is mirrored by all 4 of the major genres, although pop does climb up again. However as less and less tracks make it past week 30, the results may be a bit distorted and a larger database would be needed to verify them.
 
@@ -86,4 +87,4 @@ As the title above says this is a very brief examination of the relationship of 
 
 ![Chart 7](https://colin-gr-crawford.github.io/assets/img/Billboard/TtoPkvsWkCht.png)
 
-This is essentially saying that if you spend twenty weeks in the charts you will likely peak at " (20*3.806)-12.229 days or 63 days. Or another example it is day 120, you have just peaked, how long do you have left? The answer is roughly ((120-12.229)/3.806)-(120/7) == 11 weeks."
+This is essentially saying that if you spend twenty weeks in the charts you will likely peak at about (20*3.806)-12.229 days == 63 days. Or another example it is day 120, you have just peaked, how long do you have left? The answer is roughly ((120-12.229)/3.806)-(120/7) == 11 weeks.
